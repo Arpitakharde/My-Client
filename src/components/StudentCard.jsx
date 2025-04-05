@@ -9,7 +9,7 @@ import { Link } from "react-router";
 function StudentCard({id, name, city, loadStudents}){
 
     const deleteStudent = async() =>{
-        const response = await axios.delete(`http://localhost:5001/students/${id}`)
+        const response = await axios.delete(`${import.meta.env.VITE_API_URL}/students/${id}`);
         if(response.data.success){
             toast.success(response.data.message)
             loadStudents()

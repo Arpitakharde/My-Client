@@ -35,7 +35,7 @@ function Edit(){
 
     const loadStudent = async() => {
         try{
-            const response = await axios.get(`https://my-server-8e3c.onrender.com/students/${userId}`);
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/students/${userId}`);
             setStudent(response.data.data)
         }
         catch(e){

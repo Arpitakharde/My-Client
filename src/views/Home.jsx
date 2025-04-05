@@ -2,14 +2,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
-import StudentCard from "./../components/StudentCard";
+import StudentCard from "/../components/StudentCard";
 import AddIcon from "./../assets/add-user.png";
 
 const Home = () => {
   const [students, setStudents] = useState([]);
 
   const loadStudents = async() => {
-    const response = await axios.get("https://my-server-8e3c.onrender.com/students")
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/students`)
     setStudents(response.data.data)
   }
 
