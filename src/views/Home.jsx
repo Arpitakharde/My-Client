@@ -9,7 +9,7 @@ const Home = () => {
   const [students, setStudents] = useState([]);
 
   const loadStudents = async() => {
-    const response = await axios.get("http://localhost:5001/students")
+    const response = await axios.get("https://my-server-8e3c.onrender.com/students")
     setStudents(response.data.data)
   }
 
