@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
-import StudentCard from "/../components/StudentCard";
+import StudentCard from "./../components/StudentCard";
 import AddIcon from "./../assets/add-user.png";
 
 const Home = () => {
